@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<!-- by ZHOU,BAOJUN 2016/4  -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Baojun Zhou's homepage~</title>
+    <link rel="stylesheet" href="./css/style.css"> 
+    <link rel="stylesheet" id="penscratch-fonts-css" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&amp;subset=latin%2Clatin-ext" type="text/css" media="all"> 
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script> 
+    <script type="text/javascript" id="platform"> 
+        var platformJs = $('#platform');
+        if (navigator.platform.match(/win32|linux|mac/i)) {
+            $(function() {
+                $('#main-layer').addClass('customScrollbar');
+            });
+        }
+        platformJs.remove();
+    </script>
+    <script type="text/javascript">
+        var key = new Array;
+        var loading = false;
+        $(document).keydown(onKeyPress);
+
+        function onKeyPress(event) {
+            var event = event ? event : window.event;
+            var x = event.keyCode ? event.keyCode : event.which;
+            if (typeof(playing) == "boolean" && playing) {
+                if (x == 81 || x == 113)
+                    skill(MISSILESKILL);
+                else if (x == 87 || x == 119)
+                    skill(POWERSKILL);
+                else if (x == 27)
+                    endGame();
+                return;
+            }
+            if (loading) return;
+            if (x == 13) {
+                if (key.length == 4 && (key[0] == 71 || key[0] == 103) && (key[1] == 65 || key[1] == 97) && (key[2] == 77 || key[2] == 109) && (key[3] == 69 || key[3] == 101)) {
+                    hideMainLayer();
+                    if (typeof(showGame) == "function") showGame();
+                    else {
+                        addLoader();
+                    }
+                }
+                key = [];
+            } else {
+                key.push(x);
+                if (key.length > 4) {
+                    key.shift();
+                }
+            }
+        }
+
+        function showMainLayer() {
+            $('#main-layer').addClass('blur-in').show();
+            setTimeout(function() {
+                $('#main-layer').removeClass('blur-in');
+            }, 500);
+        }
+
+        function hideMainLayer() {
+            $('#main-layer').addClass('blur-out');
+            setTimeout(function() {
+                $('#main-layer').hide().removeClass('blur-out');
+            }, 500);
+        }
+
+        function addLoader() {
+            $('body').append('<div id="loader" class="loader-in"><div class="loader-delay1"/><div class="loader-delay2"/><div/><div class="loader-delay2"/><div class="loader-delay1"/></div>');
+            loading = true;
+            setTimeout(function() {
+                $('#loader').removeClass('loader-in');
+                $.ajax({
+                    type: "GET",
+                    url: "./game/game.js",
+                    error: function() {
+                        showMainLayer();
+                        removeLoader();
+                    },
+                    dataType: "script"
+                });
+            }, 500);
+        }
+
+        function removeLoader() {
+            $(loader).addClass('loader-out');
+            setTimeout(function() {
+                $('#loader').remove();
+                loading = false;
+            }, 500);
+        }
+    </script>
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="bookmark" href="./favicon.ico"/>
+</head>
+
+<body>
+    <div id="main-layer">
+        <div class="background"><div class="background2">
+            <div class="card">
+                <div class="header"> 
+                    <img class="avater" src="image/Photograph.jpg" width="100%"> 
+                    <div class="info">
+                        <div width="100%">
+                            <img class="small-avater" src="image/avater.png" width="30px">
+                            <h1>Baojun Zhou (M1)</h1>
+                        </div>
+                        <p><a href="http://www.osdp.cs.tsukuba.ac.jp/index.html">Operating System &amp; Distributed Processing (OSDP) Lab </a><br>
+                            <a href="http://www.cs.tsukuba.ac.jp/index.html">Department of Computer Science</a><br>
+                            <a href="http://www.tsukuba.ac.jp/">University of Tsukuba</a></p>
+                        <p>Telephone: (+81) 070-1565-4996 <br> Email: <a href="mailto:zhoubaojun@osdp.cs.tsukuba.ac.jp">zhoubaojun@osdp.cs.tsukuba.ac.jp</a><br> Address: Room 107, Buildin<span class="hint">g</span> 3E, 1-1-1 Tennodai, <br> Tsukuba Science City, Ibaraki, 305-8573, J<span class="hint">a</span>pan</p>
+                    </div>
+                </div>
+                <div class="main">
+                    <h2>Research Interests </h2>
+                    <ul>
+                        <li>Network optimization through big data</li>
+                        <li><span class="hint">M</span>achine learning</li>
+                    </ul>
+                    <div class="backtop">
+                        <a href="#top">Back to top</a>
+                    </div>
+                </div>
+                <div class="main">
+                    <h2>Resume</h2>
+                    <h3>Education Experience</h3>
+                    <ul>
+                        <li>April 2016-Pres<span class="hint">e</span>nt, M.E., Department of Computer Science, University of Tsukuba, Tsukuba Science City, Ibaraki, Japan</li>
+                        <li>April 2015-February 2016, Research Student, Department of Computer Science, University of Tsukuba, Tsukuba Science City, Ibaraki, Japan</li>
+                        <li>
+                            September 2010-July 2014, B.E., Departm<span class="hint">ent</span> of Electronics and Information Engineering, Huazhong Univ<span class="hint">er</span>sity of Science &amp; Technology (HUST), Wuhan, Hubei, P.R.China
+                        </li>
+                    </ul>
+                    <div class="backtop">
+                        <a href="#top">Back to top</a>
+                    </div>
+                </div>
+                <div class="footer" align="center">Last updated in April 2016.<br><span class="footer-hidden">There is a secret on this webpage. Can you find it ;)</span></div>
+            </div> 
+        </div></div>
+    </div>
+</body>
+
+</html>
