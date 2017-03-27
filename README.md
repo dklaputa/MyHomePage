@@ -9,7 +9,7 @@ You have two kinds of skills.
 - Press "Q": Tracking missiles
 - Press "W": Full force
 
-You can only put each skill 3 times.
+You can only use each skill 3 times.
 
 Some screenshots:
 
