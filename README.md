@@ -8,16 +8,15 @@ In the game, you need to be careful not be fired by the enemies' bullets, and be
 You have two kinds of skills.
 - Press "Q": Tracking missiles
 - Press "W": Full force
-You only put each skill 3 times.
 
-Some screenshots
+You can only put each skill 3 times.
 
-<img src="https://github.com/dklaputa/MyHomePage/raw/master/Images/1.png" width="45%" /> <img src="https://github.com/dklaputa/MyHomePage/raw/master/Images/2.png" width="45%" />
+Some screenshots:
 
-<img src="https://github.com/dklaputa/MyHomePage/raw/master/Images/3.png" width="45%" /> <img src="https://github.com/dklaputa/MyHomePage/raw/master/Images/4.png" width="45%" />
+<img src="https://github.com/dklaputa/MyHomePage/raw/master/Images/1.png" width="30%" /> <img src="https://github.com/dklaputa/MyHomePage/raw/master/Images/2.png" width="30%" /> <img src="https://github.com/dklaputa/MyHomePage/raw/master/Images/3.png" width="30%" />
 
-<img src="https://github.com/dklaputa/MyHomePage/raw/master/Images/5.png" width="45%" /> <img src="https://github.com/dklaputa/MyHomePage/raw/master/Images/6.png" width="45%" />
+<img src="https://github.com/dklaputa/MyHomePage/raw/master/Images/4.png" width="30%" /> <img src="https://github.com/dklaputa/MyHomePage/raw/master/Images/5.png" width="30%" /> <img src="https://github.com/dklaputa/MyHomePage/raw/master/Images/6.png" width="30%" />
 
-<img src="https://github.com/dklaputa/MyHomePage/raw/master/Images/7.png" width="45%" />
+<img src="https://github.com/dklaputa/MyHomePage/raw/master/Images/7.png" width="30%" />
 
 Currently, there are only one mission that contains 3 kinds of enemies and 1 boss, I will add more missions in the future. Enjoy yourself!
