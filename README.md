@@ -1,7 +1,8 @@
 # MyHomePage
 http://www.osdp.cs.tsukuba.ac.jp/zhoubaojun/
 
-Press "g", "a", "m", "e" and "enter" anywhere in the website, then you can find the game ;)
+Quite a simple home page, right? But in fact there is a game hidden in it.
+Press keyboard "g", "a", "m", "e" and "enter" anywhere in the website, then you can find the game ;)
 
 In the game, you need to be careful not be fired by the enemies' bullets, and beat the final boss. 
 
