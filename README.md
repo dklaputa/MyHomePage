@@ -1,5 +1,5 @@
 # MyHomePage
-http://www.osdp.cs.tsukuba.ac.jp/zhoubaojun/
+https://dklaputa.github.io/MyHomePage/
 
 Quite a simple home page, right? But in fact there is a game hidden in it.
 Press keyboard "g", "a", "m", "e" and "enter" anywhere in the website, then you can find the game ;)
