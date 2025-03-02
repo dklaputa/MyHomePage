@@ -697,7 +697,7 @@ var Boss1 = {
     }
 };
 // ------------------------------------------------------------------------------------------------------------
-$('body').append('<link rel="stylesheet" href="./game/game.css"><div id="game-layer" style="display:none;" onmousemove="mouseMove(event)" ontouchmove="mouseMove(event)"><div id="bar"/><div class="bar-text"><span class="shake-vertical" style="cursor: default;">SKILLS: PRESS <span class="key">Q</span>, <span class="key">W</span></span><span style="margin-right:10px; float:right; cursor:pointer;" onclick="endGame()"><b>EXIT</b> <span class="key">Esc</span></span></div><div class="canvas-holder"><canvas id="game-canvas" onclick="mouseClick()"/></div></div>');
+$('body').append('<link rel="stylesheet" href="./game/game.css"><div id="game-layer" style="display:none;" onmousemove="mouseMove(event)" ontouchmove="touchMove(event)"><div id="bar"/><div class="bar-text"><span class="shake-vertical" style="cursor: default;">SKILLS: PRESS <span class="key">Q</span>, <span class="key">W</span></span><span style="margin-right:10px; float:right; cursor:pointer;" onclick="endGame()"><b>EXIT</b> <span class="key">Esc</span></span></div><div class="canvas-holder"><canvas id="game-canvas" onclick="mouseClick()"/></div></div>');
 var jlayer = $('#game-layer');
 var jbar = jlayer.find('#bar');
 var jcanvas = jlayer.find('#game-canvas');
@@ -798,6 +798,11 @@ function resize() {
 function mouseMove(e) {
     mouseX = e.clientX - pixelDisplayer.margin - paddingLeft;
     mouseY = e.clientY - pixelDisplayer.margin - paddingTop;
+}
+
+function touchMove(e) {
+    mouseX = e.touches[0].clientX - pixelDisplayer.margin - paddingLeft;
+    mouseY = e.touches[0].clientY - pixelDisplayer.margin - paddingTop;
 }
 
 function mouseClick() {
