@@ -12,6 +12,26 @@
 </head>
 
 <body>
+    <script type="text/javascript">
+        var loading = false;
+        addLoader();
+
+        function addLoader() {
+            $('body').append('<div id="loader" class="loader-in"><div class="loader-delay1"/><div class="loader-delay2"/><div/><div class="loader-delay2"/><div class="loader-delay1"/></div>');
+            loading = true;
+            setTimeout(function () {
+                $('#loader').removeClass('loader-in');
+            }, 500);
+        }
+
+        function removeLoader() {
+            $(loader).addClass('loader-out');
+            setTimeout(function () {
+                $('#loader').remove();
+                loading = false;
+            }, 500);
+        }
+    </script>
     <script src="./game/game.js"></script>
 </body>
 
